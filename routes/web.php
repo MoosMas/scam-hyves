@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    $posts = \App\Models\Post::find(1);
+    $posts = \App\Models\Post::all()->sortBy('created_at', 0, true);
     return view('dashboard', ['posts' => $posts]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
