@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -34,7 +35,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post->title = $request->title;
+        $post->message = $request->message;
+        $post->poster_id = auth()->id();
+        $post->save();
+
+        return redirect()
+            ->route('dashboard');
     }
 
     /**
