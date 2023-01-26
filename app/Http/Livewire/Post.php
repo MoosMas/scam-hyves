@@ -14,6 +14,11 @@ class Post extends Component
         $this->post = $post;
     }
     
+    public function toggleLike($reactionId)
+    {
+//        $this->post->reactions()->attach(['user_id' => auth()->id(), 'item_id' => $reactionId]);
+    }
+    
     public function render()
     {
         return view('livewire.post');
