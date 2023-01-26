@@ -9,14 +9,16 @@ class Post extends Component
     
     public $post;
     
+    public $liked = false;
+    
     public function mount($post)
     {
         $this->post = $post;
     }
     
-    public function toggleLike($reactionId)
+    public function toggleLike()
     {
-//        $this->post->reactions()->attach(['user_id' => auth()->id(), 'item_id' => $reactionId]);
+        $this->liked = !$this->liked;
     }
     
     public function render()

@@ -16,11 +16,13 @@
 			<a class="font-bold text-gray-700 cursor-pointer" tabindex="0" role="link">{{$post->poster->name}}</a>
 		</div>
 		
-{{--		<div class="border border-gray-300 rounded-lg px-3">--}}
-{{--			@foreach(auth()->user()->inventory as $item)--}}
-{{--				<span wire:click="toggleLike({{$item->id}})">{{$item->name}}</span>--}}
-{{--			@endforeach--}}
-{{--		</div>--}}
-
+		<button wire:click="toggleLike()"
+		        class="btn hover:border-gray-300 @if($liked) btn-primary @endif">
+			@if($liked)
+				Liked
+			@else
+				Like
+			@endif
+		</button>
 	</div>
 </div>
