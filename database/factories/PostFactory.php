@@ -20,7 +20,7 @@ class PostFactory extends Factory
         $users = User::all();
         
         return [
-            'title' => fake()->title,
+            'title' => fake()->sentence(3),
             'message' => fake()->text,
             'poster_id' => $users->random()
         ];
