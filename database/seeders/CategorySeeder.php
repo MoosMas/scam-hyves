@@ -18,6 +18,9 @@ class CategorySeeder extends Seeder
         $categories=[
             [
                 "name" => "profiel picture",
+            ],
+            [
+                "name" =>"emoji"
             ]
         ];
         foreach ($categories as $category) {
