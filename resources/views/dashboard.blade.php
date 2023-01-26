@@ -32,7 +32,7 @@
 
 		<div class="feed">
 			@foreach($posts as $post)
-				@livewire('post', ['post' => $post], key($post->id))
+				<livewire:post :post="$post" :wire:key="$post->id">
 			@endforeach
 		</div>
 	</div>
