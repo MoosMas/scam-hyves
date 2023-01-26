@@ -3,6 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Profile') }}
         </h2>
+        <a class="text-primary" href="{{route('profile.show', Auth::id())}}">Profile page</a>
     </x-slot>
 
     <div class="py-12">
