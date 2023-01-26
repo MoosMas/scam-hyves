@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class, 'poster_id');
     }
+    
+    public function inventory()
+    {
+        return $this->belongsToMany(Item::class, ItemUser::class);
+    }
 }

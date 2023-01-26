@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('post_reactions', function (Blueprint $table) {
+        Schema::create('item_user', function (Blueprint $table) {
             $table->id();
-            
-            $table->foreignId('post_id')
-                ->references('id')
-                ->on('posts');
             
             $table->foreignId('user_id')
                 ->references('id')
@@ -39,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_reactions');
+        Schema::dropIfExists('user_items');
     }
 };

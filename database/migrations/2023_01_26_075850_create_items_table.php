@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reactions', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
             $table->string('img_path');
+            $table->foreignId('category_id')
+                ->references('id')
+                ->on('categories');
+            $table->enum('rarity', [0, 1, 2, 3, 4, 5, 6]);
             $table->timestamps();
         });
     }
