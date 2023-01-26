@@ -2,7 +2,7 @@
     <x-slot name="header">
     </x-slot>
 </x-app-layout>
-    
+
 {{--The grid is bootstrap--}}
             <div class="row">
                 <div class="col-sm-8"><h2>Post a message</h2>
@@ -39,6 +39,8 @@
                     </div>
                 </div>
         </div>
+ </div>
+
 
 
 
